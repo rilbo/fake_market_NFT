@@ -6,8 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-red': '#f83a3a',
+                        'custon-purple': '#7000ff',
+                        'custom-black': '#05010d'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body class="bg-custom-black">
     
 </body>
 </html>
