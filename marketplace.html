@@ -33,14 +33,18 @@
     <main class="container mx-auto my-8">
         <div class="justify-between mb-4 flex flex-col-reverse md:flex-row text-center">
             <div class="space-x-2 mt-4 md:my-0">
-                <a href="#" class="bg-transparent hover:bg-custom-purple font-semibold text-white py-2 px-4 border-2 border-custom-purple hover:border-transparent rounded inline-flex items-center">
+                <button id="allBtn" data-color="red" onclick="fetchByPage(1, 'allBtn')" class="bg-transparent hover:bg-custom-red font-semibold text-white py-2 px-4 border-2 border-custom-red hover:border-transparent rounded inline-flex items-center">
+                    <span class="material-symbols-rounded">apps</span>
+                    &nbsp;All
+                </button>
+                <button id="creatorsBtn" data-color="purple" onclick="fetchByPage(1, 'creatorsBtn')" class="bg-transparent hover:bg-custom-purple font-semibold text-white py-2 px-4 border-2 border-custom-purple hover:border-transparent rounded inline-flex items-center">
                     <span class="material-symbols-rounded">account_circle</span>
-                    &nbsp;By Author
-                </a>
-                <a href="#" class="bg-transparent hover:bg-custom-blue font-semibold text-white py-2 px-4 border-2 border-custom-blue hover:border-transparent rounded inline-flex items-center">
+                    &nbsp;By Creators
+                </button>
+                <button id="salesBtn" data-color="blue" onclick="fetchByPage(1, 'salesBtn')" class="bg-transparent hover:bg-custom-blue font-semibold text-white py-2 px-4 border-2 border-custom-blue hover:border-transparent rounded inline-flex items-center">
                     <span class="material-symbols-rounded">insights</span>
                     &nbsp;Best sales
-                </a>
+                </button>
             </div>
             <label class="relative block w-9/12 md:w-1/3 mx-auto md:mx-0">
                 <span class="sr-only">Search</span>
@@ -51,8 +55,7 @@
               </label>
         </div>
         <section>
-            <div id="nftCollectionContainer" class="flex flex-wrap justify-center gap-x-6 gap-y-6 my-10">
-            </div>
+            <div id="nftCollectionContainer" class="flex flex-wrap justify-center gap-x-6 gap-y-6 my-10"></div>
             <div id="collections_footer" class="text-center mt-2">
                 <button id="previous_pos" class="hidden border-2 border-custom-blue rounded px-2 bg-custom-black text-white hover:border-custom-blue hover:bg-custom-blue" onclick="fetchByPage('previous')"></button>
                 <button id="current_pos" class="border-2 border-custom-purple text-white rounded px-2" disabled>1</button>
@@ -63,7 +66,7 @@
     </main>
     <script>
         (function() {
-            fetchByPage(); 
+            fetchByPage();
         })();
     </script>
 </body>
