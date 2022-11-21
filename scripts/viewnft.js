@@ -1,9 +1,7 @@
 window.addEventListener('DOMContentLoaded', async () => {
-    // const apiUrl = `https://awesome-nft-app.herokuapp.com/`;
-    // const id = window.location.search.split('=')[1]
-    // const url = `${apiUrl}/nft/${id}`;
-
-    const url = `https://awesome-nft-app.herokuapp.com/nft/385541171`;
+    const apiUrl = `https://awesome-nft-app.herokuapp.com`;
+    const id = window.location.search.split('=')[1]
+    const url = `${apiUrl}/nft/${id}`;
 
     await fetch(url)
         .then(function(response) {
