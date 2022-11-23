@@ -22,13 +22,13 @@ window.addEventListener('DOMContentLoaded', async () => {
             title.innerHTML = myJson.name;
             image.src = myJson.image_url;
             if(myJson.description == "" || myJson.description == null){
-                description.innerHTML = "Aucune description";
+                description.innerHTML = "no description";
             }else{
                 description.innerHTML = myJson.description;
             }
 
             if(myJson.creator.name == "" || myJson.creator.name == null){
-                creator.innerHTML = "Créateur inconnu";
+                creator.innerHTML = "unknown creator";
             }else{
                 creator.innerHTML = myJson.creator.name;
             }
@@ -40,13 +40,13 @@ window.addEventListener('DOMContentLoaded', async () => {
             }
 
             if(myJson.collection.description == "" || myJson.collection.description == null){
-                pCollection.innerHTML = "Aucune description";
+                pCollection.innerHTML = "no description";
             }else{
                 pCollection.innerHTML = myJson.collection.description;
             }
 
             if(myJson.owner.username == "" || myJson.owner.username == null){
-                owner.innerHTML = "Propriétaire inconnu";
+                owner.innerHTML = "unknown owner";
             }else{
                 owner.innerHTML = myJson.owner.username;
             }
@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             }
 
             if(myJson.sales == "" || myJson.sales == null){
-                price.innerHTML = "Non disponible";
+                price.innerHTML = "not available";
             }else{
                 price.innerHTML = myJson.sales + " ETH";
             }
