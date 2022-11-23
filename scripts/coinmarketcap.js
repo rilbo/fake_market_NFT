@@ -1,6 +1,6 @@
 const apiKey = "51abae1f-5e75-4d96-8911-f1436145a2c3"
 let url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
-let qString = "?CMC_PRO_API_KEY=" + apiKey + "&sort=market_cap&start=1&limit=5";
+let qString = "?CMC_PRO_API_KEY=" + apiKey + "&sort=market_cap&start=1&limit=3";
 
 // const getCoinPrice = async function () {
 //     const ResponseData = await fetch(url + qString);
@@ -24,7 +24,7 @@ fetch(url + qString)
                 li.innerHTML = `
                     <div class="flex items-center">
                         <div>
-                            <h2 class="text-lg font-medium text-gray-700 sm:text-2xl">${myJson.data[i].name}</h2>
+                            <h2 class="text-lg font-medium text-white-700 sm:text-2xl">${myJson.data[i].name}</h2>
                             <div class=" text-xs text-blue-500">
                             ${myJson.data[i].symbol}
                             </div>

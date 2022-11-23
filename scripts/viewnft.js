@@ -27,10 +27,10 @@ window.addEventListener('DOMContentLoaded', async () => {
                 description.innerHTML = myJson.description;
             }
 
-            if(myJson.creator.name == "" || myJson.creator.name == null){
+            if(myJson.creator.username == "" || myJson.creator.username == null){
                 creator.innerHTML = "unknown creator";
             }else{
-                creator.innerHTML = myJson.creator.name;
+                creator.innerHTML = myJson.creator.username;
             }
 
             if(myJson.collection.image_url == "" || myJson.collection.image_url == null){
