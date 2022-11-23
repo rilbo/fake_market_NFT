@@ -42,8 +42,8 @@
         }
     </script>
     <script>
-        const params = (new URL(document.location)).searchParams;
-        if (!params.id) {
+        const params = new URLSearchParams(window.location.search);
+        if (!params.get("id")) {
             window.location = "/index.html";
         }
     </script>
