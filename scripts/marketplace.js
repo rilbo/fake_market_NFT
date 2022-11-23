@@ -43,7 +43,7 @@ function fetchDataFilter(in_page = null, filter = '') {
             unLoad();
         });
     }
-}
+};
 
 function fetchByPage(URL, page) {
     clearCards();
@@ -140,3 +140,5 @@ function search(input) {
         });
     }
 }
+
+fetchDataFilter();

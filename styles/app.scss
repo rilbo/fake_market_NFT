@@ -1,3 +1,65 @@
+#menu-cta svg {
+  display: none;
+}
+
+#menu-cta svg.active {
+  display: block;
+}
+
+#menu {
+  transition: all 300ms ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#menu.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.hero-banner__text {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-banner__text {
+      font-size: 3rem;
+  }
+
+  #menu {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.placeholder {
+  padding-top: 100%;
+  position: relative;
+  background: #ffffe6;
+}
+
+.glow-animation {
+  animation: glow 1.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    opacity: .3;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: .3;
+  }
+}
+
+.hero-banner__text .rainbow {
+  background: linear-gradient(45deg,#f83a3a 10%,#f13dd4 50%,#7000ff 90%);
+  -webkit-background-clip: text;background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .loader {
     width: 48px;
     height: 48px;

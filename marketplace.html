@@ -4,37 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketplace</title>
+    <title>Fake NFT - Marketplace</title>
+    <style>
+        @font-face {
+            font-family: 'Inter-Bold';
+            src: url('./assets/Inter-Bold.ttf');
+        }
+
+        @font-face {
+            font-family: 'Inter-Regular';
+            src: url('./assets/Inter-Regular.ttf');
+        }
+    </style>
     <link rel="stylesheet" href="styles/app.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
+                fontFamily: {
+                    'regular': "'Inter-Regular'",
+                    'title': "'Inter-Bold'"
+                },
                 extend: {
                     colors: {
                         'custom-red': '#f83a3a',
                         'custom-purple': '#7000ff',
                         'custom-blue': '#0a4dcd',
-                        'custom-white': 'hsla(0,0%,100%,.9)',
+                        'custom-white': '#ffffffe6',
                         'custom-black': '#05010d'
                     }
                 }
             }
         }
     </script>
-    <script src="/scripts/app.js"></script>
-    <script src="/scripts/marketplace.js"></script>
+    <link rel="stylesheet" href="/styles/app.css">
+    <script src="/scripts/script.js" defer></script>
+    <script src="/scripts/app.js" defer></script>
+    <script src="/scripts/marketplace.js" defer></script>
 </head>
-<body class="bg-custom-black font-regular text-custom-white">
-    <div id="loader" class="hidden absolute top-0 left-0 z-50 w-full h-screen flex justify-center items-center bg-black bg-opacity-90">
-        <span class="loader"></span>
-    </div>
+<body class="relative bg-custom-black font-regular text-custom-white">
     <header class="container mx-auto sticky top-0 left-0 z-20 py-2 px-2">
-        <div class="flex justify-between items-center py-3 px-5 bg-custom-black bg-opacity-50 rounded">
+        <div class="flex justify-between lg:grid lg:grid-cols-2 lg:grid-cols-3 items-center py-3 px-5 bg-custom-black bg-opacity-50 rounded">
             <a href="index.html" class="font-title text-xl">Fake NFT</a>
-            <nav>
-                <ul class="flex justify-center list-none">
+            <nav class="relative">
+                <button id="menu-cta" class="w-7 h-7 lg:hidden">
+                    <svg class="active" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ffffe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" color="#000"><path d="M6 7h12M6 12h12M6 17h12"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#ffffe6" stroke-width="2" d="m7 7 10 10M7 17 17 7"/></svg>
+                </button>
+                <ul id="menu" class="absolute top-0 -right-3 p-3 mt-16 bg-custom-black bg-opacity-50 rounded text-end lg:relative lg:!flex lg:justify-center lg:m-0 lg:p-0 list-none">
                     <li class="p-2 opacity-60 transition-all duration-200 ease-in-out hover:opacity-100">
                         <a href="index.html">Home</a>
                     </li>
@@ -48,9 +66,12 @@
             </nav>
         </div>
     </header>
-    <main class="container mx-auto my-8">
+    <div id="loader" class="hidden absolute top-0 left-0 z-50 w-full h-screen flex justify-center items-center bg-black bg-opacity-90">
+        <span class="loader"></span>
+    </div>
+    <main class="container mx-auto my-8 px-3">
         <div class="justify-between mb-4 flex flex-col-reverse md:flex-row text-center">
-            <div class="space-x-2 mt-4 md:my-0">
+            <div class="flex gap-2 flex-wrap w-max mx-auto md:mx-0 mt-4 md:my-0">
                 <button id="allBtn" data-color="red" onclick="fetchDataFilter(1, 'allBtn')" class="bg-transparent hover:bg-custom-red font-semibold text-white py-2 px-4 border-2 border-custom-red hover:border-transparent rounded inline-flex items-center">
                     <span class="material-symbols-rounded">apps</span>
                     &nbsp;All
@@ -82,11 +103,23 @@
         </section>
 
     </main>
-    <script>
-        (function() {
-            fetchDataFilter();
-
-        })();
-    </script>
+    
+    <footer class="container mx-auto p-8">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-5 mb-10">
+            <a href="index.html" class="font-title text-xl col-span-2 md:col-span-1 mb-5 md:mb-0">Fake NFT</a>
+            <ul class="grid gap-3 list-none">
+                <li class="opacity-60 transition-all duration-200 ease-in-out hover:opacity-100">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="opacity-60 transition-all duration-200 ease-in-out hover:opacity-100">
+                    <a href="marketplace.html">Marketplace</a>
+                </li>
+                <li class="opacity-60 transition-all duration-200 ease-in-out hover:opacity-100">
+                    <a href="#">About</a>
+                </li>
+            </ul>
+        </div>
+        <span class="block w-full text-center opacity-50 text-xs">Copyrights © Fake NFT - 2022</span>
+    </footer>
 </body>
 </html>
