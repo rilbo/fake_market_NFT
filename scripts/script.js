@@ -109,6 +109,7 @@
     if (index > 2) return;
     const desc = (NFT.description.length > 53 ? NFT.description.slice(0, 50).padEnd(53, '...') : NFT.description);
     const creator = (NFT.creator.username.length > 0 ? `By <strong>${NFT.creator.username}</strong>` : "");
+    if (!fakeCards[index]) return;
     fakeCards[index].innerHTML  = `
     <div class="flex flex-wrap gap-3 w-full h-full rounded-lg border bg-gray-800 border-gray-700 hover:border-gray-500" id="card_${NFT.id}">
         <a class="w-full h-max" href="nft.html?id=${NFT.id}">
