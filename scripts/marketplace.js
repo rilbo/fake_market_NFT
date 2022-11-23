@@ -77,16 +77,16 @@ function loadCard(nft) {
 
         const content = `
         <div class="max-w-sm rounded-lg border bg-gray-800 border-gray-700 hover:border-gray-500" id="card_${nft.id}" style="width: 350px;">
-            <a href="#${nft.id}">
+            <a href="nft.html?id=${nft.id}">
                 <img class="rounded-t-lg m-auto" src="${nft.image_url}" alt="${nft.name}" />
             </a>
             <div class="p-5">
-                <a href="#${nft.id}" class="text-white hover:text-gray-300">
+                <a href="nft.html?id=${nft.id}" class="text-white hover:text-gray-300">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight">${nft.name}</h5>
                 </a>
                 <p class="mb-3 font-normal text-gray-400">${desc}</p>
                 <div class="flex justify-between items-center">
-                    <a href="#${nft.id}" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-custom-blue rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <a href="nft.html?id=${nft.id}" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-custom-blue rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Read more&nbsp;
                         <span class="material-symbols-rounded">arrow_right_alt</span>
                     </a>
