@@ -4,17 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Fake NFT</title>
+    <link rel="stylesheet" href="/styles/app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="/scripts/script.js" defer></script>
+    <script src="scripts/viewnft.js" defer></script>
+    <script src="scripts/favorite.js" defer></script>
+    <style>
+        @font-face {
+            font-family: 'Inter-Bold';
+            src: url('./assets/Inter-Bold.ttf');
+        }
+
+        @font-face {
+            font-family: 'Inter-Regular';
+            src: url('./assets/Inter-Regular.ttf');
+        }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
+                fontFamily: {
+                    'regular': "'Inter-Regular'",
+                    'title': "'Inter-Bold'"
+                },
                 extend: {
                     colors: {
                         'custom-red': '#f83a3a',
                         'custom-purple': '#7000ff',
                         'custom-blue': '#0a4dcd',
-                        'custom-white': 'hsla(0,0%,100%,.9)',
+                        'custom-white': '#ffffe6',
                         'custom-black': '#05010d'
                     }
                 }
@@ -24,18 +44,19 @@
 </head>
 <body class="relative bg-custom-black font-regular text-custom-white">
     <header class="container mx-auto sticky top-0 left-0 z-20 py-2 px-2">
-        <div class="flex justify-between items-center py-3 px-5 bg-custom-black bg-opacity-50 rounded">
+        <div class="flex justify-between lg:grid lg:grid-cols-2 lg:grid-cols-3 items-center py-3 px-5 bg-custom-black bg-opacity-50 rounded">
             <a href="index.html" class="font-title text-xl">Fake NFT</a>
-            <nav>
-                <ul class="flex justify-center list-none">
+            <nav class="relative">
+                <button id="menu-cta" class="w-7 h-7 lg:hidden">
+                    <svg class="active" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ffffe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" color="#000"><path d="M6 7h12M6 12h12M6 17h12"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#ffffe6" stroke-width="2" d="m7 7 10 10M7 17 17 7"/></svg>
+                </button>
+                <ul id="menu" class="absolute top-0 -right-3 p-3 mt-16 bg-custom-black bg-opacity-50 rounded text-end lg:relative lg:!flex lg:justify-center lg:m-0 lg:p-0 list-none">
                     <li class="p-2 opacity-60 transition-all duration-200 ease-in-out hover:opacity-100">
                         <a href="index.html">Home</a>
                     </li>
                     <li class="p-2 opacity-60 transition-all duration-200 ease-in-out hover:opacity-100">
                         <a href="marketplace.html">Marketplace</a>
-                    </li>
-                    <li class="p-2 opacity-60 transition-all duration-200 ease-in-out hover:opacity-100">
-                        <a href="#">About</a>
                     </li>
                 </ul>
             </nav>
@@ -73,23 +94,18 @@
         </section>
     </main>
     <footer class="container mx-auto p-8">
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-5 mb-10">
-            <a href="index.html" class="font-title text-xl col-span-2 md:col-span-1 mb-5 md:mb-0">Fake NFT</a>
+        <div class="grid grid-cols-2 lg:grid-cols-5 gap-5 mb-10">
+            <a href="index.html" class="font-title text-xl col-span-2 lg:col-span-1 mb-5 lg:mb-0">Fake NFT</a>
             <ul class="grid gap-3 list-none">
                 <li class="opacity-60 transition-all duration-200 ease-in-out hover:opacity-100">
                     <a href="index.html">Home</a>
                 </li>
                 <li class="opacity-60 transition-all duration-200 ease-in-out hover:opacity-100">
-                    <a href="#">Marketplace</a>
-                </li>
-                <li class="opacity-60 transition-all duration-200 ease-in-out hover:opacity-100">
-                    <a href="#">About</a>
+                    <a href="marketplace.html">Marketplace</a>
                 </li>
             </ul>
         </div>
         <span class="block w-full text-center opacity-50 text-xs">Copyrights © Fake NFT - 2022</span>
     </footer>
 </body>
-<script src="scripts/viewnft.js"></script>
-<script src="scripts/favorite.js"></script>
 </html>

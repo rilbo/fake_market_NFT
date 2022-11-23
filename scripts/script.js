@@ -109,16 +109,16 @@
     const creator = (NFT.creator.username.length > 0 ? `By <strong>${NFT.creator.username}</strong>` : "");
     fakeCards[index].innerHTML  = `
     <div class="flex flex-wrap gap-3 w-full h-full rounded-lg border bg-gray-800 border-gray-700 hover:border-gray-500" id="card_${NFT.id}">
-        <a class="w-full h-max" href="#${NFT.id}">
+        <a class="w-full h-max" href="nft.html?id=${NFT.id}">
             <img class="rounded-t-lg w-full" src="${NFT.image_url}" alt="${NFT.name}" />
         </a>
         <div class="self-start flex flex-wrap gap-3 p-5 h-1/3">
-            <a href="#${NFT.id}" class="text-white hover:text-gray-300">
+            <a href="nft.html?id=${NFT.id}" class="text-white hover:text-gray-300">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight">${NFT.name}</h5>
             </a>
             <p class="font-normal text-gray-400">${desc}</p>
             <div class="mt-auto flex justify-between items-center flex-wrap gap-2">
-                <a href="#${NFT.id}" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-custom-blue rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <a href="nft.html?id=${NFT.id}" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-custom-blue rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Read more&nbsp;
                   <span class="material-symbols-rounded">arrow_right_alt</span>
                 </a>
