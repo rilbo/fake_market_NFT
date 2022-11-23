@@ -26,10 +26,28 @@
     <script src="/scripts/app.js"></script>
     <script src="/scripts/marketplace.js"></script>
 </head>
-<body class="bg-custom-black">
+<body class="bg-custom-black font-regular text-custom-white">
     <div id="loader" class="hidden absolute top-0 left-0 z-50 w-full h-screen flex justify-center items-center bg-black bg-opacity-90">
         <span class="loader"></span>
     </div>
+    <header class="container mx-auto sticky top-0 left-0 z-20 py-2 px-2">
+        <div class="flex justify-between items-center py-3 px-5 bg-custom-black bg-opacity-50 rounded">
+            <a href="index.html" class="font-title text-xl">Fake NFT</a>
+            <nav>
+                <ul class="flex justify-center list-none">
+                    <li class="p-2 opacity-60 transition-all duration-200 ease-in-out hover:opacity-100">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="p-2 opacity-60 transition-all duration-200 ease-in-out hover:opacity-100">
+                        <a href="marketplace.html">Marketplace</a>
+                    </li>
+                    <li class="p-2 opacity-60 transition-all duration-200 ease-in-out hover:opacity-100">
+                        <a href="#">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main class="container mx-auto my-8">
         <div class="justify-between mb-4 flex flex-col-reverse md:flex-row text-center">
             <div class="space-x-2 mt-4 md:my-0">
