@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             }
 
             if(myJson.collection.image_url == "" || myJson.collection.image_url == null){
-                imageCollect.src = "https://via.placeholder.com/728x90";
+                imageCollect.src = "https://via.placeholder.com/150";
             }else{
                 imageCollect.src = myJson.collection.image_url;
             }
