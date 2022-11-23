@@ -16,6 +16,8 @@
   const error = form?.querySelector('#error');
   const success = form?.querySelector('#success');
   const mailformat = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+  if (!form || !label || !input || !error || !success) return;
   const activeLabel = () => {
     label?.style.setProperty('top', '-25px');
     label?.style.setProperty('left', '-5px');
