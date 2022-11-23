@@ -41,6 +41,12 @@
             }
         }
     </script>
+    <script>
+        const params = (new URL(document.location)).searchParams;
+        if (!params.id) {
+            window.location = "/index.html";
+        }
+    </script>
 </head>
 <body class="relative bg-custom-black font-regular text-custom-white">
     <header class="container mx-auto sticky top-0 left-0 z-20 py-2 px-2">
